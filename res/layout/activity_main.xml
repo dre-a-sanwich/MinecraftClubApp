@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_main_page"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/server"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:alpha="0.85"
+            android:background="@color/orange"
+            android:onClick="handleButton"
+            android:text="@string/server" />
+
+        <Button
+            android:id="@+id/news"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/server"
+            android:onClick="handleButton"
+            android:background="@color/orange"
+            android:layout_margin="5dp"
+            android:alpha="0.85"
+            android:text="@string/news" />
+
+        <Button
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/news"
+            android:onClick="handleButton"
+            android:background="@color/orange"
+            android:layout_margin="5dp"
+            android:alpha="0.85"
+            android:text="@string/about" />
+        
+        <Button
+            android:id="@+id/book_and_quill"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/about"
+            android:onClick="handleButton"
+            android:background="@color/orange"
+            android:layout_margin="5dp"
+            android:alpha="0.85"
+            android:text="@string/book_and_quill" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

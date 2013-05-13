@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_about_page"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AboutActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+	    <ImageButton
+	        android:id="@+id/contact"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="30dp"
+	        android:background="@drawable/contact_us"
+	        android:contentDescription="@string/contact"
+	        android:onClick="handleButton"
+	        android:alpha="0.25"/>
+
+	    <ImageButton
+	        android:id="@+id/officials"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_toLeftOf="@+id/contact"
+	        android:background="@drawable/officials"
+	        android:contentDescription="@string/officials"
+	        android:onClick="handleButton"
+	        android:alpha="0.25" />
+
+	    <ImageButton
+	        android:id="@+id/constitution"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_toRightOf="@+id/website"
+	        android:background="@drawable/constitution"
+	        android:contentDescription="@string/constitution"
+	        android:onClick="handleButton"
+	        android:alpha="0.25" />
+
+	    <ImageButton
+	        android:id="@+id/website"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginRight="30dp"
+	        android:background="@drawable/website"
+	        android:contentDescription="@string/website"
+	        android:onClick="handleButton" 
+            android:alpha="0.25"/>
+    
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:background="@color/lightGray"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="142dp"
+        android:onClick="handleButton"
+        android:linksClickable="true"
+        android:autoLink="web" 
+        android:textIsSelectable="true"/>
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/back"
+        android:contentDescription="@string/back"
+        android:onClick="handleButton" />
+
+</RelativeLayout>

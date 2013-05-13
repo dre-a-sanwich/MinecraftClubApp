@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_book_page"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".BookActivity" >
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/back"
+        android:contentDescription="@string/back"
+        android:onClick="handleButton" />
+
+    <ImageButton
+        android:id="@+id/new_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/back"
+        android:layout_alignTop="@+id/load"
+        android:alpha="0.25"
+        android:background="@drawable/new_entry"
+        android:contentDescription="@string/new_entry"
+        android:onClick="handleButton" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignLeft="@+id/new_entry"
+        android:layout_below="@+id/load"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/book_and_quill_text_background"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/creep"
+            android:layout_toLeftOf="@+id/creep"
+            android:textSize="25sp"
+            android:text="@string/name"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/x_text"
+            android:layout_alignLeft="@+id/name"
+            android:text="@string/y"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/y_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/x_text"
+            android:layout_below="@+id/x_text"
+            android:layout_toRightOf="@+id/y"
+            android:alpha="0.50"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/y_text"
+            android:layout_alignLeft="@+id/name"
+            android:text="@string/z"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/z_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/y_text"
+            android:layout_below="@+id/y_text"
+            android:layout_toRightOf="@+id/z"
+            android:alpha="0.50"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/name_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_toLeftOf="@+id/creep"
+            android:alpha="0.50"
+            android:ems="10"
+            android:inputType="text"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/x_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/clear"
+            android:layout_below="@+id/creep"
+            android:layout_toRightOf="@+id/x"
+            android:alpha="0.50"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:maxLines="1" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/creep"
+            android:layout_alignLeft="@+id/name"
+            android:text="@string/x"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/z"
+            android:layout_below="@+id/z_text"
+            android:text="@string/save"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:onClick="handleButton" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/save"
+            android:layout_alignBottom="@+id/save"
+            android:layout_toRightOf="@+id/save"
+            android:text="@string/clear"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:onClick="handleButton" />
+
+        <TextView
+            android:id="@+id/db"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+
+        <ImageView
+            android:id="@+id/creep"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/creeper_face" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/list_layout"
+   		android:layout_width="match_parent"
+        android:layout_height="350dp" 
+        android:layout_alignLeft="@+id/new_entry"
+	    android:layout_below="@+id/load"
+	    android:layout_marginTop="22dp"
+	    android:background="@drawable/book_and_quill_text_background"
+	    android:visibility="gone" >
+	    <LinearLayout
+	   		android:layout_width="match_parent"
+	        android:layout_height="350dp"
+	        android:layout_alignLeft="@+id/new_entry"
+	        android:layout_below="@+id/load"
+	    	android:orientation="vertical" >
+	    
+		    <ListView android:id="@+id/list"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="30dp" />
+		    
+		</LinearLayout>
+		
+	    <ImageButton
+	        android:id="@+id/delete"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentBottom="true"
+	        android:layout_margin="28dp"
+	        android:background="@drawable/delete"
+	        android:contentDescription="@string/delete"
+	        android:onClick="handleButton" />
+	    
+	</RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0.25"
+        android:background="@drawable/load_book"
+        android:contentDescription="@string/load"
+        android:onClick="handleButton" />
+
+</RelativeLayout>
