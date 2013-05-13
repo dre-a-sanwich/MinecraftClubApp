@@ -1,5 +1,7 @@
 package com.minecraft.app;
 
+import com.minecraft.app.R;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;

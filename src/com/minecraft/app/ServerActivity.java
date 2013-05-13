@@ -2,6 +2,8 @@ package com.minecraft.app;
 
 import java.io.IOException;
 
+import com.minecraft.app.R;
+
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
